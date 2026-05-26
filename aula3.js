@@ -1,20 +1,16 @@
 const prompt = require("prompt-sync")();
-
-const secreto = 42;
-
-let tentativa;
-let tentativas = 0;
-
-while (tentativa != secreto) {
-  tentativa = Number(prompt("Digite um número: "));
-  
-  tentativas++;
-
-  if (tentativa < secreto) {
-    console.log("O número secreto é maior.");
-  } else if (tentativa > secreto) {
-    console.log("O número secreto é menor.");
-  }
+let soma = 0
+let n1
+for (let i = 0; i < 5; i++){
+    n1 = Number(prompt("digite um numero: "))
+    soma = soma + n1
 }
+let media = soma / 5
 
-console.log(`Parabéns! Você acertou em ${tentativas} tentativas.`);
+if (media >= 7) {
+    console.log("Aprovado");
+  } else if (media >= 5) {
+    console.log("Recuperação");
+  } else {
+    console.log("Reprovado");
+  }
